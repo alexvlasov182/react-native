@@ -1,0 +1,65 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+.babelrc
+.npm/
+.yarn/
+
+# Build directories
+ios/build/
+android/app/build/
+android/build/
+
+# Android
+*.keystore
+!gradle-wrapper.jar
+/android/local.properties
+/android/app/src/main/assets/index.android.bundle
+/android/app/src/main/res/drawable*/src_assets_*
+android/app/release/
+
+# iOS
+ios/Pods/
+ios/*.xcodeproj/project.xcworkspace/
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcodeproj/project.xcworkspace/
+ios/*.xcodeproj/xcshareddata/
+ios/*.xcodeproj/xcuserdata/
+*.hmap
+*.ipa
+*.xcuserstate
+
+# Bundle output
+*.jsbundle
+*.map
+*.pack
+*.d.ts
+
+# Miscellaneous
+.expo/
+*.expo/
+*.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# MacOS
+*.DS_Store
+
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# React Native specific
+.expo/
+*.expo/
