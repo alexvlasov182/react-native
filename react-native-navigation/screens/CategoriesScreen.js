@@ -1,4 +1,5 @@
-import { FlatList } from "react-native";
+import React, { useState } from "react";
+import { FlatList, Button, View } from "react-native";
 import CategoryGridTitle from "../components/CategoryGridTitle";
 import { CATEGORIES } from "../data/dummy-data";
 
@@ -12,12 +13,22 @@ function renderCategoryItem(itemData) {
 }
 
 function CategoriesScreen() {
+  const [numColumns, setNumColumns] = useState(2);
+
   return (
-    <FlatList
-      data={CATEGORIES}
-      keyExtractor={(item) => item.id}
-      renderItem={renderCategoryItem}
-    />
+    <View style={{ flex: 1 }}>
+      <Button
+        title="Toggle Columns"
+        onPress={() => setNumColumns((prev) => (prev === 2 ? 1 : 2))}
+      />
+      <FlatList
+        data={CATEGORIES}
+        key={numColumns}
+        keyExtractor={(item) => item.id}
+        renderItem={renderCategoryItem}
+        numColumns={numColumns}
+      />
+    </View>
   );
 }
 
