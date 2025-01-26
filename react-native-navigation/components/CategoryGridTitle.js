@@ -2,7 +2,6 @@ import { Pressable, View, Text, StyleSheet } from "react-native";
 
 function CategoryGridTitle({ title, color }) {
   console.log("CategoryGridTitle", title, color);
-  console.log("Working with react-native application");
 
   return (
     <View style={styles.gridItem}>
