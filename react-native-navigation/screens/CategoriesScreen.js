@@ -4,6 +4,8 @@ import CategoryGridTitle from "../components/CategoryGridTitle";
 import { CATEGORIES } from "../data/dummy-data";
 
 function renderCategoryItem(itemData) {
+  console.log("Render Category Item:", itemData.item);
+
   return (
     <CategoryGridTitle
       title={itemData.item.title}
@@ -12,7 +14,7 @@ function renderCategoryItem(itemData) {
   );
 }
 
-function CategoriesScreen() {
+const CategoriesScreen = () => {
   const [numColumns, setNumColumns] = useState(2);
 
   return (
@@ -30,6 +32,6 @@ function CategoriesScreen() {
       />
     </View>
   );
-}
+};
 
 export default CategoriesScreen;
