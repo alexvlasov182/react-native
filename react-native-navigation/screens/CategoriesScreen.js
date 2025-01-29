@@ -3,19 +3,24 @@ import { FlatList, Button, View } from "react-native";
 import CategoryGridTitle from "../components/CategoryGridTitle";
 import { CATEGORIES } from "../data/dummy-data";
 
-function renderCategoryItem(itemData) {
-  console.log("Render Category Item:", itemData.item);
-
-  return (
-    <CategoryGridTitle
-      title={itemData.item.title}
-      color={itemData.item.color}
-    />
-  );
-}
-
-const CategoriesScreen = () => {
+const CategoriesScreen = ({ navigation }) => {
   const [numColumns, setNumColumns] = useState(2);
+
+  function renderCategoryItem(itemData) {
+    console.log("Render Category Item:", itemData.item);
+
+    function pressHandler() {
+      navigation.navigate("MealsOverview");
+    }
+
+    return (
+      <CategoryGridTitle
+        title={itemData.item.title}
+        color={itemData.item.color}
+        onPress={pressHandler}
+      />
+    );
+  }
 
   return (
     <View style={{ flex: 1 }}>
