@@ -9,6 +9,7 @@ const CategoriesScreen = ({ navigation }) => {
   function renderCategoryItem(itemData) {
     console.log("Render Category Item:", itemData.item);
     console.log("Working with react-native");
+    console.log(numColumns);
 
     function pressHandler() {
       navigation.navigate("MealsOverview");
