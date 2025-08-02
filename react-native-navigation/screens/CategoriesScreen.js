@@ -12,7 +12,12 @@ const CategoriesScreen = ({ navigation }) => {
     console.log(numColumns);
 
     function pressHandler() {
-      navigation.navigate("MealsOverview");
+      navigation.navigate("MealsOverview", {
+        categoryId: itemData.item.id,
+      });
+      console.log("Pressed Category:", itemData.item.title);
+      console.log("Category ID:", itemData.item.id);
+      console.log("Navigation to MealsOverview with categoryId:", itemData.item.id);
     }
 
     return (
